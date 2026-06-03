@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Corevein Connect — Factory-direct manufacturer of palm vein recognition modules, palm vein terminals, facial recognition time clocks, breathalyzer terminals, 8-inch portable time clocks, and palm vein POS devices. 10+ years manufacturing experience.">
+<meta name="keywords" content="palm vein, biometric, vein scanner, facial recognition, POS terminal, access control, security, manufacturer, China, Corevein">
+<title>Corevein Connect | Palm Vein Biometric Solutions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #0066CC;
+  --primary-dark: #004A99;
+  --primary-light: #E8F2FC;
+  --accent: #00A86B;
+  --bg: #FFFFFF;
+  --bg-alt: #F7F9FC;
+  --bg-dark: #0A1628;
+  --text: #1A1A2E;
+  --text-light: #5A6D80;
+  --text-white: #FFFFFF;
+  --border: #E2E8F0;
+  --shadow: 0 2px 24px rgba(0,0,0,0.06);
+  --shadow-lg: 0 8px 48px rgba(0,0,0,0.08);
+  --radius: 12px;
+  --radius-sm: 8px;
+  --max-width: 1200px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===== Navigation ===== */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  z-index: 1000;
+  padding: 0 24px;
+}
+.nav-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+.logo img {
+  height: 40px;
+  width: auto;
+  flex-shrink: 0;
+}
+
+.nav-links { display: flex; gap: 32px; align-items: center; }
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--primary); }
+.nav-cta {
+  background: var(--primary);
+  color: #fff !important;
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-weight: 600 !important;
+  transition: background 0.2s;
+}
+.nav-cta:hover { background: var(--primary-dark) !important; }
+.menu-btn { display: none; background: none; border: none; cursor: pointer; font-size: 24px; }
+
+/* ===== Hero ===== */
+.hero {
+  padding: 160px 24px 100px;
+  background: linear-gradient(160deg, var(--bg-alt) 0%, #E8F0FE 50%, #F0F4FF 100%);
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -200px; right: -200px;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(0,102,204,0.08) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -100px; left: -100px;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(0,168,107,0.06) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.hero-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+.hero-badge {
+  display: inline-block;
+  background: var(--primary-light);
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+.hero h1 {
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -1px;
+  margin-bottom: 20px;
+  color: var(--text);
+}
+.hero h1 span { color: var(--primary); }
+.hero p {
+  font-size: 17px;
+  color: var(--text-light);
+  line-height: 1.7;
+  margin-bottom: 32px;
+  max-width: 520px;
+}
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s;
+}
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+}
+.btn-primary:hover { background: var(--primary-dark); transform: translateY(-1px); box-shadow: 0 4px 16px rgba(0,102,204,0.3); }
+.btn-outline {
+  background: #fff;
+  color: var(--primary);
+  border: 1.5px solid var(--primary);
+}
+.btn-outline:hover { background: var(--primary-light); }
+.hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-illustration {
+  width: 100%;
+  max-width: 480px;
+  aspect-ratio: 1;
+  background: linear-gradient(135deg, #fff 0%, #f0f6ff 100%);
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+}
+.hero-illustration .palm-icon {
+  font-size: 120px;
+  opacity: 0.12;
+  position: absolute;
+}
+.hero-illustration .hero-card {
+  background: #fff;
+  padding: 24px 32px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  text-align: center;
+  z-index: 1;
+}
+.hero-card .stat { font-size: 36px; font-weight: 800; color: var(--primary); }
+.hero-card .label { font-size: 13px; color: var(--text-light); margin-top: 4px; }
+
+/* ===== Stats Bar ===== */
+.stats-bar {
+  max-width: var(--max-width);
+  margin: -36px auto 0;
+  position: relative;
+  z-index: 2;
+  padding: 0 24px;
+}
+.stats-inner {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 28px 40px;
+  gap: 24px;
+}
+.stat-item { text-align: center; }
+.stat-item .num { font-size: 28px; font-weight: 800; color: var(--text); }
+.stat-item .desc { font-size: 13px; color: var(--text-light); margin-top: 4px; }
+
+/* ===== Section Common ===== */
+.section {
+  padding: 80px 24px;
+}
+.section-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+.section-label {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+.section h2 {
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: 16px;
+}
+.section .subtitle {
+  font-size: 16px;
+  color: var(--text-light);
+  max-width: 600px;
+  margin-bottom: 48px;
+}
+
+/* ===== Products ===== */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+.product-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px;
+  transition: all 0.25s;
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+.product-card:hover {
+  border-color: var(--primary);
+  box-shadow: 0 4px 24px rgba(0,102,204,0.08);
+  transform: translateY(-2px);
+}
+.product-icon {
+  width: 56px; height: 56px;
+  background: var(--primary-light);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  flex-shrink: 0;
+}
+.product-info h3 { font-size: 17px; font-weight: 700; margin-bottom: 6px; }
+.product-info p { font-size: 14px; color: var(--text-light); line-height: 1.6; margin-bottom: 10px; }
+.product-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+.tag {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 4px;
+  background: var(--bg-alt);
+  color: var(--text-light);
+}
+
+/* ===== Advantages ===== */
+.advantages-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.advantage-card {
+  background: var(--bg-alt);
+  border-radius: var(--radius);
+  padding: 32px;
+  transition: all 0.25s;
+}
+.advantage-card:hover { background: #fff; box-shadow: var(--shadow); }
+.adv-icon {
+  width: 44px; height: 44px;
+  background: var(--primary-light);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+.advantage-card h4 { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+.advantage-card p { font-size: 14px; color: var(--text-light); line-height: 1.6; }
+
+/* ===== Applications ===== */
+#applications { background: var(--bg-dark); color: var(--text-white); }
+#applications .section-label { color: var(--accent); }
+#applications h2 { color: #fff; }
+#applications .subtitle { color: rgba(255,255,255,0.6); }
+.apps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.app-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius);
+  padding: 28px;
+  text-align: center;
+  transition: all 0.25s;
+}
+.app-card:hover {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.16);
+}
+.app-icon { font-size: 36px; margin-bottom: 14px; }
+.app-card h4 { font-size: 15px; font-weight: 600; margin-bottom: 6px; }
+.app-card p { font-size: 13px; color: rgba(255,255,255,0.55); line-height: 1.5; }
+
+/* ===== About ===== */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+.about-visual {
+  background: var(--bg-alt);
+  border-radius: var(--radius);
+  aspect-ratio: 4/3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 80px;
+  border: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+.about-text h2 { margin-bottom: 20px; }
+.about-text p {
+  font-size: 15px;
+  color: var(--text-light);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+.about-highlights { display: flex; gap: 32px; margin-top: 28px; }
+.highlight-item .hl-num { font-size: 28px; font-weight: 800; color: var(--primary); }
+.highlight-item .hl-label { font-size: 13px; color: var(--text-light); margin-top: 2px; }
+
+/* ===== CTA ===== */
+#contact { background: linear-gradient(160deg, var(--primary) 0%, var(--primary-dark) 100%); color: #fff; }
+#contact .section-label { color: rgba(255,255,255,0.7); }
+#contact h2 { color: #fff; }
+#contact .subtitle { color: rgba(255,255,255,0.7); }
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+.contact-info .contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+.contact-item .ci-icon { font-size: 20px; }
+.contact-form {
+  background: #fff;
+  padding: 32px;
+  border-radius: var(--radius);
+  color: var(--text);
+}
+.contact-form h3 { font-size: 20px; font-weight: 700; margin-bottom: 20px; }
+.form-group { margin-bottom: 16px; }
+.form-group label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 6px; color: var(--text); }
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-family: inherit;
+  transition: border-color 0.2s;
+  outline: none;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus { border-color: var(--primary); }
+.form-group textarea { min-height: 100px; resize: vertical; }
+.btn-submit {
+  width: 100%;
+  background: var(--primary);
+  color: #fff;
+  padding: 14px;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.btn-submit:hover { background: var(--primary-dark); }
+
+/* ===== Footer ===== */
+.footer {
+  background: var(--bg-dark);
+  color: rgba(255,255,255,0.6);
+  padding: 48px 24px 32px;
+}
+.footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 48px;
+}
+.footer-brand h3 { color: #fff; font-size: 20px; margin-bottom: 12px; }
+.footer-brand p { font-size: 13px; line-height: 1.7; }
+.footer-col h4 { color: #fff; font-size: 14px; margin-bottom: 16px; }
+.footer-col a {
+  display: block;
+  color: rgba(255,255,255,0.5);
+  text-decoration: none;
+  font-size: 13px;
+  margin-bottom: 8px;
+  transition: color 0.2s;
+}
+.footer-col a:hover { color: #fff; }
+.footer-bottom {
+  max-width: var(--max-width);
+  margin: 40px auto 0;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  text-align: center;
+  font-size: 12px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+  .hero-inner { grid-template-columns: 1fr; text-align: center; }
+  .hero p { max-width: 100%; }
+  .hero-actions { justify-content: center; }
+  .hero-visual { order: -1; }
+  .hero-illustration { max-width: 300px; }
+  .hero h1 { font-size: 36px; }
+  .products-grid { grid-template-columns: 1fr; }
+  .advantages-grid { grid-template-columns: 1fr; }
+  .apps-grid { grid-template-columns: repeat(2, 1fr); }
+  .about-grid { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .stats-inner { grid-template-columns: repeat(2, 1fr); }
+  .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+}
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .menu-btn { display: block; color: var(--text); }
+  .nav-links.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 64px; left: 0; right: 0;
+    background: #fff;
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--border);
+    gap: 16px;
+    box-shadow: var(--shadow-lg);
+  }
+  .hero { padding: 120px 16px 60px; }
+  .hero h1 { font-size: 30px; }
+  .hero p { font-size: 15px; }
+  .section { padding: 60px 16px; }
+  .section h2 { font-size: 28px; }
+  .apps-grid { grid-template-columns: 1fr 1fr; }
+  .about-highlights { flex-direction: column; gap: 16px; }
+  .stats-bar { margin-top: -20px; }
+  .stats-inner { padding: 20px; }
+  .stat-item .num { font-size: 22px; }
+}
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo">
+      <img src="corevein_logo.png" alt="Corevein Connect" style="height:44px;">
+    </a>
+    <button class="menu-btn" id="menuBtn">&#9776;</button>
+    <div class="nav-links" id="navLinks">
+      <a href="#products">Products</a>
+      <a href="#advantages">Advantages</a>
+      <a href="#applications">Applications</a>
+      <a href="#about">About</a>
+      <a href="#contact" class="nav-cta">Get Quote</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge" id="heroBadge">&#x1F44B; Palm Vein Biometrics</div>
+      <h1 id="heroHeadline">Next-Gen <span>Biometric</span> Solutions for a Secure World</h1>
+      <p id="heroDesc">
+        Factory-direct manufacturer of palm vein recognition modules, palm vein recognition terminals, facial recognition time clocks, pre-shift breathalyzer terminals, 8-inch portable time clocks, and palm vein POS devices. With an in-house software development team and over 10 years of exceptional manufacturing experience, we have earned the trust of partners in more than 20 countries.
+      </p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Request a Quote &#8594;</a>
+        <a href="#products" class="btn btn-outline">Explore Products</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-illustration">
+        <div class="palm-icon">&#x1F590;</div>
+        <div class="hero-card">
+          <div class="stat">0.01s</div>
+          <div class="label">Recognition Speed</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Bar -->
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat-item"><div class="num">10+</div><div class="desc">Years Manufacturing</div></div>
+    <div class="stat-item"><div class="num">20+</div><div class="desc">Countries Served</div></div>
+    <div class="stat-item"><div class="num">99.99%</div><div class="desc">Recognition Accuracy</div></div>
+    <div class="stat-item"><div class="num">24/7</div><div class="desc">Technical Support</div></div>
+  </div>
+</div>
+
+<!-- Products -->
+<section class="section" id="products">
+  <div class="section-inner">
+    <div class="section-label">Our Products</div>
+    <h2>Hardware Built for Security</h2>
+    <p class="subtitle">From palm vein modules to complete POS systems, we manufacture the hardware that powers modern identity and payment solutions.</p>
+    <div class="products-grid" id="productsGrid">
+      <!-- Products loaded dynamically from content/products.json -->
+    </div>
+  </div>
+</section>
+
+<!-- Advantages -->
+<section class="section" id="advantages" style="background: var(--bg-alt);">
+  <div class="section-inner">
+    <div class="section-label">Why Corevein</div>
+    <h2>Built on a Foundation of Trust</h2>
+    <p class="subtitle">We're not a trading company. We're the factory. That means better quality control, faster delivery, and direct pricing.</p>
+    <div class="advantages-grid">
+      <div class="advantage-card">
+        <div class="adv-icon">&#x1F3ED;</div>
+        <h4>Factory Direct</h4>
+        <p>We own our production lines. No middlemen, no markup. You deal directly with the manufacturer. Full quality control from PCB to final assembly.</p>
+      </div>
+      <div class="advantage-card">
+        <div class="adv-icon">&#x1F4CB;</div>
+        <h4>Certified Quality</h4>
+        <p>ISO-certified manufacturing processes. Every unit undergoes rigorous testing before shipment. CE, FCC, RoHS compliant products.</p>
+      </div>
+      <div class="advantage-card">
+        <div class="adv-icon">&#x1F527;</div>
+        <h4>Customization Ready</h4>
+        <p>Need custom firmware, branded packaging, or hardware modifications? Our engineering team supports OEM and ODM projects at competitive MOQs.</p>
+      </div>
+      <div class="advantage-card">
+        <div class="adv-icon">&#x1F310;</div>
+        <h4>Global Logistics</h4>
+        <p>Reliable shipping to 20+ countries. Flexible terms: EXW, FOB, CIF. We handle the paperwork so you don't have to.</p>
+      </div>
+      <div class="advantage-card">
+        <div class="adv-icon">&#x1F4AC;</div>
+        <h4>Dedicated Support</h4>
+        <p>Every client gets a dedicated account manager. Technical support in English. SDK documentation and integration assistance included.</p>
+      </div>
+      <div class="advantage-card">
+        <div class="adv-icon">&#x2699;</div>
+        <h4>10+ Years Experience</h4>
+        <p>We've been manufacturing security hardware since 2012. Deep expertise in biometric components and embedded systems.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Applications -->
+<section class="section" id="applications">
+  <div class="section-inner">
+    <div class="section-label">Applications</div>
+    <h2>Where Our Technology Works</h2>
+    <p class="subtitle">Palm vein biometrics and POS solutions deployed across industries worldwide.</p>
+    <div class="apps-grid">
+      <div class="app-card">
+        <div class="app-icon">&#x1F3E6;</div>
+        <h4>Banking & Finance</h4>
+        <p>Secure ATM access, branch authentication, payment terminals</p>
+      </div>
+      <div class="app-card">
+        <div class="app-icon">&#x1F3E5;</div>
+        <h4>Healthcare</h4>
+        <p>Patient ID verification, pharmacy access, medical record security</p>
+      </div>
+      <div class="app-card">
+        <div class="app-icon">&#x1F3EB;</div>
+        <h4>Education</h4>
+        <p>Campus access, library management, exam identity verification</p>
+      </div>
+      <div class="app-card">
+        <div class="app-icon">&#x1F3ED;</div>
+        <h4>Manufacturing</h4>
+        <p>Factory floor access, time attendance, secure area control</p>
+      </div>
+      <div class="app-card">
+        <div class="app-icon">&#x1F3EC;</div>
+        <h4>Retail & POS</h4>
+        <p>Smart POS checkout, inventory management, customer loyalty</p>
+      </div>
+      <div class="app-card">
+        <div class="app-icon">&#x1F3DB;</div>
+        <h4>Government</h4>
+        <p>National ID programs, border control, secure facility access</p>
+      </div>
+      <div class="app-card">
+        <div class="app-icon">&#x1F3E0;</div>
+        <h4>Smart Buildings</h4>
+        <p>Office access, elevator control, visitor management systems</p>
+      </div>
+      <div class="app-card">
+        <div class="app-icon">&#x1F698;</div>
+        <h4>Transportation</h4>
+        <p>Transit payment, driver verification, logistics security</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section class="section" id="about">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-visual">
+        <div style="font-size: 60px;">&#x1F3ED;</div>
+        <div style="position: absolute; bottom: 20px; font-size: 14px; color: var(--text-light);">Shenzhen, China</div>
+      </div>
+      <div class="about-text">
+        <div class="section-label">About Us</div>
+        <h2 id="aboutTitle">Built on a Decade of Engineering Excellence</h2>
+        <p id="aboutP1">
+          For over a decade, we have continuously refined our biometric hardware manufacturing processes — not as traders, but as engineers working on the production line. Corevein Connect is a new international brand that builds on this tradition and focuses specifically on palm vein biometrics and smart payment solutions.
+        </p>
+        <p id="aboutP2">
+          Our production facility in Shenzhen features dedicated production lines for manufacturing biometric modules, POS terminals, and access control systems. Every product that leaves our factory embodies our unwavering commitment to precision engineering and rigorous quality control. We welcome factory audits.
+        </p>
+        <div class="about-highlights">
+          <div class="highlight-item"><div class="hl-num">2012</div><div class="hl-label">Established</div></div>
+          <div class="highlight-item"><div class="hl-num">Shenzhen</div><div class="hl-label">Headquarters</div></div>
+          <div class="highlight-item"><div class="hl-num">ISO</div><div class="hl-label">Certified</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="section" id="contact">
+  <div class="section-inner">
+    <div class="section-label">Get In Touch</div>
+    <h2>Let's Build Something Secure</h2>
+    <p class="subtitle">Tell us about your project. We'll respond within 24 hours with a tailored quote.</p>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-item"><div class="ci-icon">&#9993;</div> <span id="coEmail">info@coreveintech.com</span></div>
+        <div class="contact-item"><div class="ci-icon">&#x1F4CD;</div> <span id="coAddress">Shenzhen, Guangdong, China</span></div>
+        <div class="contact-item"><div class="ci-icon">&#x1F310;</div> www.coreveintech.com</div>
+        <p style="margin-top: 24px; font-size: 14px; opacity: 0.75;">
+          We ship worldwide. OEM and ODM projects are welcome. Minimum order quantities are negotiable based on product type.
+        </p>
+      </div>
+      <div class="contact-form" id="inquiryForm">
+        <h3>Send an Inquiry</h3>
+        <form id="contactForm" onsubmit="handleSubmit(event)">
+          <div class="form-group">
+            <label for="name">Your Name *</label>
+            <input type="text" id="name" required placeholder="John Smith">
+          </div>
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" required placeholder="john@company.com">
+          </div>
+          <div class="form-group">
+            <label for="company">Company</label>
+            <input type="text" id="company" placeholder="Your Company Ltd.">
+          </div>
+          <div class="form-group">
+            <label for="interest">I'm interested in *</label>
+            <select id="interest" required>
+              <option value="">Select product...</option>
+              <option>Palm Vein Module</option>
+              <option>Face + Palm Vein Terminal</option>
+              <option>Android POS Terminal</option>
+              <option>Portable Time & Attendance Terminal</option>
+              <option>OEM / ODM Project</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Tell us about your requirements, quantity, timeline..."></textarea>
+          </div>
+          <button type="submit" class="btn-submit">Send Inquiry &#8594;</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="corevein_logo.png" alt="Corevein Connect" style="height:40px;margin-bottom:12px;">
+      <h3 style="color:#fff;font-size:20px;margin-bottom:12px;">Corevein Connect</h3>
+      <p>Factory-direct manufacturer of palm vein biometrics, facial recognition terminals, POS devices, and access control solutions. Serving global partners since 2012.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Products</h4>
+      <a href="#products">Palm Vein Module</a>
+      <a href="#products">Face + Vein Terminal</a>
+      <a href="#products">POS Terminal</a>
+      <a href="#products">Portable Time & Attend.</a>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="#about">About Us</a>
+      <a href="#contact">Contact</a>
+      <a href="#applications">Applications</a>
+      <a href="#advantages">Why Corevein</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2026 Corevein Connect Limited. All rights reserved. | Formerly Makeex Solutions
+  </div>
+</footer>
+
+<script>
+// ============================================================
+// Dynamic Content Loader — loads CMS-editable JSON data
+// ============================================================
+
+async function loadJSON(path) {
+  try {
+    const res = await fetch(path + '?v=' + Date.now());
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    return await res.json();
+  } catch (e) {
+    console.warn('Failed to load ' + path + ':', e.message);
+    return null;
+  }
+}
+
+async function initDynamicContent() {
+  // Load products
+  const productsData = await loadJSON('/content/products.json');
+  if (productsData && productsData.items) {
+    renderProducts(productsData.items.filter(p => p.published).sort((a, b) => a.order - b.order));
+  }
+
+  // Load hero
+  const heroData = await loadJSON('/content/pages/hero.json');
+  if (heroData) {
+    if (heroData.badge) {
+      document.getElementById('heroBadge').textContent = heroData.badge;
+    }
+    if (heroData.headline && heroData.highlight) {
+      const hl = heroData.highlight;
+      document.getElementById('heroHeadline').innerHTML = 
+        heroData.headline.replace(hl, '<span>' + hl + '</span>');
+    }
+    if (heroData.description) {
+      document.getElementById('heroDesc').textContent = heroData.description;
+    }
+  }
+
+  // Load about
+  const aboutData = await loadJSON('/content/pages/about.json');
+  if (aboutData) {
+    if (aboutData.title) document.getElementById('aboutTitle').textContent = aboutData.title;
+    if (aboutData.p1) document.getElementById('aboutP1').textContent = aboutData.p1;
+    if (aboutData.p2) document.getElementById('aboutP2').textContent = aboutData.p2;
+  }
+
+  // Load company info
+  const companyData = await loadJSON('/content/pages/company.json');
+  if (companyData) {
+    if (companyData.email) document.getElementById('coEmail').textContent = companyData.email;
+    if (companyData.address) document.getElementById('coAddress').textContent = companyData.address;
+  }
+}
+
+function renderProducts(products) {
+  const grid = document.getElementById('productsGrid');
+  if (!grid || !products.length) return;
+  
+  grid.innerHTML = products.map(p => `
+    <div class="product-card">
+      <div class="product-icon">${p.icon || '📦'}</div>
+      <div class="product-info">
+        <h3>${escapeHTML(p.title)}</h3>
+        ${p.image ? '<img src="' + p.image + '" alt="' + escapeHTML(p.title) + '" style="width:100%;max-width:200px;border-radius:8px;margin:8px 0;">' : ''}
+        <p>${escapeHTML(p.description)}</p>
+        <div class="product-tags">
+          ${(p.tags || []).map(t => '<span class="tag">' + escapeHTML(t) + '</span>').join('')}
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
+function escapeHTML(str) {
+  const div = document.createElement('div');
+  div.textContent = str;
+  return div.innerHTML;
+}
+
+// Mobile menu
+document.getElementById('menuBtn').addEventListener('click', function() {
+  document.getElementById('navLinks').classList.toggle('open');
+});
+
+// Close menu on link click
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    document.getElementById('navLinks').classList.remove('open');
+  });
+});
+
+// Form submission
+function handleSubmit(e) {
+  e.preventDefault();
+  const btn = e.target.querySelector('.btn-submit');
+  const original = btn.textContent;
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+  
+  setTimeout(() => {
+    btn.textContent = 'Sent! We\'ll reply within 24h';
+    btn.style.background = '#00A86B';
+    e.target.reset();
+    setTimeout(() => {
+      btn.textContent = original;
+      btn.style.background = '';
+      btn.disabled = false;
+    }, 3000);
+  }, 1000);
+  
+  return false;
+}
+
+// Init after DOM ready
+initDynamicContent();
+</script>
+
+</body>
+</html>

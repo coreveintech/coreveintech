@@ -1,0 +1,73 @@
+backend:
+  name: github
+  repo: CORRUPTED_TEXT/PLACEHOLDER_REPO
+  branch: main
+  base_url: https://coreveintech.com
+  auth_endpoint: /oauth/auth
+
+# 媒体文件存储
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+# Logo
+logo_url: /corevein_logo.png
+
+# 站点配置
+site_url: https://coreveintech.com
+display_url: https://coreveintech.com
+
+# 集合定义
+collections:
+  - name: "products"
+    label: "产品管理"
+    label_singular: "产品"
+    editor:
+      preview: false
+    files:
+      - label: "产品列表"
+        name: "list"
+        file: "content/products.json"
+        fields:
+          - label: "产品"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.title}} — {{fields.series}}"
+            fields:
+              - {label: "产品名称", name: "title", widget: "string"}
+              - {label: "系列", name: "series", widget: "select", options: ["CV-M", "CV-T", "CV-F", "CV-A", "CV-P", "CV-PT"]}
+              - {label: "图标 (Emoji)", name: "icon", widget: "string", default: "🖐"}
+              - {label: "产品描述", name: "description", widget: "text"}
+              - {label: "产品图片", name: "image", widget: "image", required: false}
+              - {label: "标签", name: "tags", widget: "list", default: []}
+              - {label: "排序", name: "order", widget: "number", default: 1, value_type: "int", min: 1}
+              - {label: "发布", name: "published", widget: "boolean", default: true}
+
+  - name: "pages"
+    label: "页面内容"
+    files:
+      - label: "首页 Hero"
+        name: "hero"
+        file: "content/pages/hero.json"
+        fields:
+          - {label: "标签文字", name: "badge", widget: "string"}
+          - {label: "标题", name: "headline", widget: "string"}
+          - {label: "高亮词", name: "highlight", widget: "string"}
+          - {label: "描述", name: "description", widget: "text"}
+
+      - label: "关于我们"
+        name: "about"
+        file: "content/pages/about.json"
+        fields:
+          - {label: "标题", name: "title", widget: "string"}
+          - {label: "段落一", name: "p1", widget: "text"}
+          - {label: "段落二", name: "p2", widget: "text"}
+
+      - label: "公司信息"
+        name: "company"
+        file: "content/pages/company.json"
+        fields:
+          - {label: "公司名称", name: "name", widget: "string"}
+          - {label: "邮箱", name: "email", widget: "string"}
+          - {label: "地址", name: "address", widget: "string"}
+          - {label: "电话", name: "phone", widget: "string", required: false}
+          - {label: "WhatsApp", name: "whatsapp", widget: "string", required: false}

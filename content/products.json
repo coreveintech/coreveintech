@@ -1,0 +1,44 @@
+{
+  "items": [
+    {
+      "title": "Palm Vein Biometric Module",
+      "series": "CV-M",
+      "icon": "🖐",
+      "description": "Contactless palm vein scanner module. Near-infrared imaging, liveness detection, anti-spoofing. Ideal for access control, time attendance, and identity verification.",
+      "image": "",
+      "tags": ["Contactless", "NIR Imaging", "Anti-Spoof", "SDK Available"],
+      "order": 1,
+      "published": true
+    },
+    {
+      "title": "Face + Palm Vein Terminal",
+      "series": "CV-T",
+      "icon": "📱",
+      "description": "All-in-one biometric terminal combining facial recognition with palm vein technology. Dual-mode authentication. 8-inch touchscreen. PoE / Wi-Fi / 4G support.",
+      "image": "",
+      "tags": ["Face + Vein", "8\" Display", "PoE", "Multi-mode"],
+      "order": 2,
+      "published": true
+    },
+    {
+      "title": "Android POS Terminal",
+      "series": "CV-P",
+      "icon": "💳",
+      "description": "Smart POS device with thermal printer, NFC, barcode scanner. Android OS. Supports payment integration. Compact design for retail, restaurant, and mobile payment.",
+      "image": "",
+      "tags": ["Android", "NFC", "Printer", "Handheld"],
+      "order": 3,
+      "published": true
+    },
+    {
+      "title": "Portable Mobile Time & Attendance Terminals",
+      "series": "CV-PT",
+      "icon": "🚪",
+      "description": "8-inch portable time clocks with facial recognition, palm vein authentication, and pre-shift breathalyzer integration. Built for construction sites, remote workforces, and field operations.",
+      "image": "",
+      "tags": ["Portable", "Face Recognition", "Palm Vein", "Breathalyzer"],
+      "order": 4,
+      "published": true
+    }
+  ]
+}

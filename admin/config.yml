@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: CORRUPTED_TEXT/PLACEHOLDER_REPO
+  repo: coreveintech/coreveintech
   branch: main
   base_url: https://coreveintech.com
   auth_endpoint: /oauth/auth
